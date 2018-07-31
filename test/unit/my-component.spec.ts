@@ -6,7 +6,7 @@ describe('MyComponent', () => {
 
   beforeEach(() => {
     component = StageComponent
-      .withResources('src/my-component')
+      .withResources('my-component')
       .inView('<my-component first-name.bind="firstName"></my-component>')
       .boundTo({ firstName: 'Bob' });
   });
