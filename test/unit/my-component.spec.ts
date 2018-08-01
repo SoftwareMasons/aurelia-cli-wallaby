@@ -1,12 +1,13 @@
 import {StageComponent} from 'aurelia-testing';
 import {bootstrap} from 'aurelia-bootstrapper';
+import {PLATFORM} from 'aurelia-pal';
 
 describe('MyComponent', () => {
   let component;
 
   beforeEach(() => {
     component = StageComponent
-      .withResources('my-component')
+      .withResources(PLATFORM.moduleName('my-component.html') && PLATFORM.moduleName('my-component'))
       .inView('<my-component first-name.bind="firstName"></my-component>')
       .boundTo({ firstName: 'Bob' });
   });
