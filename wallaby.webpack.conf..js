@@ -20,7 +20,10 @@ module.exports = function (wallaby) {
     plugins: [
       new DefinePlugin({AURELIA_WEBPACK_2_0: undefined}),
       new AureliaPlugin()
-    ]
+    ],
+    node: {
+      fs: "empty"
+    }
   });
 
   return {
